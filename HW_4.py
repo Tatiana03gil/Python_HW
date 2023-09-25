@@ -36,6 +36,8 @@ for i in range(num_of_scrubs):
     berries.append(int(input()))
 
 sum_max = berries[0] + berries[1] + berries[-1]
+if sum_max < berries[0] + berries[-1] + berries[-2]:
+    sum_max = berries[0] + berries[-1] + berries[-2]
 for i in range (1,len(berries)-1):
     sum_temp = berries[i] + berries[i+1] + berries[i-1]
     if sum_max < sum_temp:
